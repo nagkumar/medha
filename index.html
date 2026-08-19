@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Matrimonial Biodata - Raja Naga Medhesh</title>
+    <style>
+	@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Marcellus&family=EB+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+	:root
+	{
+	    --gold: #c9a24b;
+	    --gold-light: #e8cf8a;
+	    --gold-dark: #8a6a1f;
+	    --maroon: #6b1420;
+	    --maroon-dark: #4a0d16;
+	    --cream: #fdf6e3;
+	    --cream2: #f7ecc9;
+
+
+	    --ink: #3a2410;
+	    --link: #1a5276;
+	    --label-width: 150px;
+
+	    --accent-alpha: 0.25;
+	    --pattern-alpha: 0.05;
+
+	    /* Blue */
+	    --card-bg: #eaf7ff;
+	    --accent-rgb: 135, 206, 235;
+
+	    /* Gold */
+	    /*--card-bg: var(--cream);*/
+	    /*--accent-alpha: 0.35;*/
+
+	    /* Temple Green */
+	    /*--card-bg: #f7fbf2;*/
+	    /*--accent-rgb: 88, 135, 92;*/
+	    /*--accent-alpha: 0.20;*/
+	    /*--pattern-alpha: 0.04;*/
+
+	    /* Tulasi Green
+	    --card-bg: #fbfcf8;
+	    --accent-rgb: 70, 120, 70;*/
+
+	    /* Yellow */
+	    --card-bg: #fff9e6;
+		--accent-rgb: 235, 200, 80;
+	}
+
+	*
+	{
+	    box-sizing: border-box;
+	}
+
+	body
+	{
+	    margin: 0;
+	    padding: 24px;
+	    display: flex;
+	    justify-content: center;
+	    font-family: 'EB Garamond', serif;
+
+	    background: linear-gradient(
+		    180deg,
+		    #f8fcf4,
+		    #dcecd0,
+		    #a6c48a
+	    );
+
+	    /*background: radial-gradient(circle at 50% 0%, #f2e2ad 0%, #e0c680 60%, #cba859 100%);*/
+	}
+
+	.card
+	{
+	    position: relative;
+	    width: 900px;
+	    padding: 14px;
+	    border-radius: 6px;
+
+	    background: var(--card-bg);
+
+	    background-image: radial-gradient(circle at 8% 6%, rgba(var(--accent-rgb), var(--accent-alpha)), transparent 22%),
+	    radial-gradient(circle at 92% 6%, rgba(var(--accent-rgb), var(--accent-alpha)), transparent 22%),
+	    radial-gradient(circle at 8% 96%, rgba(var(--accent-rgb), var(--accent-alpha)), transparent 22%),
+	    radial-gradient(circle at 92% 96%, rgba(var(--accent-rgb), var(--accent-alpha)), transparent 22%),
+	    repeating-linear-gradient(
+		    135deg,
+		    rgba(var(--accent-rgb), var(--pattern-alpha)) 0 2px,
+		    transparent 2px 40px
+	    );
+
+	    box-shadow: 0 0 0 3px var(--gold),
+	    0 0 0 6px var(--maroon),
+	    0 0 0 9px var(--gold),
+	    0 20px 60px rgba(0, 0, 0, 0.35);
+	}
+
+	.inner-border
+	{
+	    border: 2px solid var(--gold-dark);
+	    border-radius: 4px;
+	    padding: 26px 34px 30px;
+	    position: relative;
+	}
+
+	.corner
+	{
+	    position: absolute;
+	    width: 70px;
+	    height: 70px;
+	    pointer-events: none;
+	}
+
+	.corner svg
+	{
+	    width: 100%;
+	    height: 100%;
+	}
+
+	.corner.tl
+	{
+	    top: 6px;
+	    left: 6px;
+	}
+
+	.corner.tr
+	{
+	    top: 6px;
+	    right: 6px;
+	    transform: scaleX(-1);
+	}
+
+	.corner.bl
+	{
+	    bottom: 6px;
+	    left: 6px;
+	    transform: scaleY(-1);
+	}
+
+	.corner.br
+	{
+	    bottom: 6px;
+	    right: 6px;
+	    transform: scale(-1, -1);
+	}
+
+	.invocation
+	{
+	    text-align: center;
+	    font-family: 'Cinzel', serif;
+	    letter-spacing: 2px;
+	    color: var(--maroon-dark);
+	    font-size: 14px;
+	    font-weight: 600;
+	    margin-bottom: 6px;
+	}
+
+	.om-wrap
+	{
+	    display: flex;
+	    justify-content: center;
+	    margin: 4px 0 10px;
+	}
+
+	.om
+	{
+	    width: 64px;
+	    height: 64px;
+	}
+
+	h1.title
+	{
+	    text-align: center;
+	    font-family: 'Cinzel Decorative', serif;
+	    font-weight: 900;
+	    font-size: 44px;
+	    color: var(--maroon);
+	    text-shadow: 1px 1px 0 var(--gold-light);
+	    margin: 0 0 10px;
+	    letter-spacing: 1px;
+	}
+
+	.name-banner
+	{
+	    background: linear-gradient(180deg, var(--gold-light), var(--gold) 55%, var(--gold-dark));
+	    border: 2px solid var(--maroon-dark);
+	    border-radius: 8px;
+	    text-align: center;
+	    padding: 10px 16px;
+	    margin: 0 auto 8px;
+	    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4);
+	}
+
+	.name-banner .name
+	{
+	    font-family: 'Cinzel', serif;
+	    font-weight: 700;
+	    font-size: 30px;
+	    color: var(--maroon-dark);
+	    letter-spacing: 1px;
+	}
+
+	.subtitle
+	{
+	    text-align: center;
+	    font-family: 'Marcellus', serif;
+	    font-style: italic;
+	    color: var(--maroon);
+	    font-size: 18px;
+	    margin-bottom: 6px;
+	}
+
+	.tagline
+	{
+	    text-align: center;
+	    font-style: italic;
+	    color: var(--maroon-dark);
+	    font-size: 15px;
+	    margin-bottom: 18px;
+	    padding-bottom: 12px;
+	    border-bottom: 1px dashed var(--gold-dark);
+	}
+
+	.section-header
+	{
+	    background: linear-gradient(180deg, var(--maroon), var(--maroon-dark));
+	    color: var(--gold-light);
+	    font-family: 'Cinzel', serif;
+	    font-weight: 700;
+	    letter-spacing: 2px;
+	    font-size: 15px;
+	    text-align: center;
+	    padding: 7px 10px;
+	    border-radius: 5px;
+	    border: 1px solid var(--gold);
+	    margin: 22px 0 14px;
+	}
+
+	.top-grid
+	{
+	    display: grid;
+	    grid-template-columns: 260px 1fr;
+	    gap: 22px;
+	    align-items: center;
+	}
+
+	.photo-frame
+	{
+	    border: 5px solid var(--gold);
+	    outline-offset: -9px;
+	    border-radius: 6px;
+	    overflow: hidden;
+	    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+            margin-left: auto;
+        }
+
+	.photo-frame img
+	{
+	    width: 100%;
+	    display: block;
+	}
+
+	.inset-photo
+	{
+	    position: absolute;
+	    top: 118px;
+	    right: 36px;
+	    width: 112px;
+	    height: 112px;
+	    border-radius: 50%;
+	    border: 4px solid var(--gold);
+	    outline: 2px solid var(--maroon-dark);
+	    overflow: hidden;
+	    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+	}
+
+	.inset-photo img
+	{
+	    width: 100%;
+	    height: 100%;
+	    object-fit: cover;
+	}
+
+	table.details
+	{
+	    width: 100%;
+	    border-collapse: collapse;
+	    font-size: 15.5px;
+	    color: var(--ink);
+	}
+
+	table.details td
+	{
+	    padding: 5px 6px;
+	    vertical-align: top;
+	}
+
+	table.details td.label
+	{
+	    font-weight: 600;
+	    text-align: right;
+	    color: var(--maroon-dark);
+	    white-space: nowrap;
+	    width: var(--label-width);
+	}
+
+	table.details td.colon
+	{
+	    width: 14px;
+	    color: var(--gold-dark);
+	}
+
+	.three-col
+	{
+	    display: grid;
+	    grid-template-columns: 1fr 1fr 1fr;
+	    gap: 14px;
+	    text-align: center;
+	}
+
+	.three-col .box
+	{
+	    border: 1.5px solid var(--gold-dark);
+	    border-radius: 8px;
+	    padding: 12px 8px;
+	    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(232, 207, 138, 0.25));
+	}
+
+	.three-col .icon
+	{
+	    font-size: 26px;
+	    margin-bottom: 4px;
+	}
+
+	.three-col .box-title
+	{
+	    font-family: 'Cinzel', serif;
+	    font-weight: 700;
+	    color: var(--maroon-dark);
+	    font-size: 13px;
+	    letter-spacing: 1px;
+	    margin-bottom: 4px;
+	}
+
+	.three-col .box-body
+	{
+	    font-size: 14px;
+	    line-height: 1.35;
+	}
+
+	.two-col
+	{
+	    display: grid;
+	    grid-template-columns: 1fr 1fr;
+	    gap: 18px;
+	}
+
+	.panel
+	{
+	    border: 1.5px solid var(--gold-dark);
+	    border-radius: 8px;
+	    padding: 14px 16px;
+	    background: rgba(255, 255, 255, 0.35);
+	}
+
+	.panel h3
+	{
+	    margin: 0 0 8px;
+	    font-family: 'Cinzel', serif;
+	    font-size: 14px;
+	    letter-spacing: 1.5px;
+	    color: var(--maroon-dark);
+	    border-bottom: 1px dashed var(--gold-dark);
+	    padding-bottom: 6px;
+	}
+
+	.panel p
+	{
+	    margin: 4px 0;
+	    font-size: 14.5px;
+	    line-height: 1.45;
+	}
+
+	.panel .row
+	{
+	    display: flex;
+	    margin-bottom: 4px;
+	}
+
+	.panel .row .lbl
+	{
+	    font-weight: 600;
+	    color: var(--maroon-dark);
+	    width: 65px;
+	    flex-shrink: 0;
+	    /*text-align: right;*/
+	    padding-right: 10px;
+	}
+
+	.panel .row .colon
+	{
+	    width: 14px;
+	    color: var(--gold-dark);
+	    flex-shrink: 0;
+	}
+
+	.panel a
+	{
+	    color: var(--link);
+	    text-decoration: none;
+	}
+
+	.about
+	{
+	    margin-top: 16px;
+	    border: 1.5px solid var(--gold-dark);
+	    border-radius: 8px;
+	    padding: 14px 18px;
+	    background: rgba(255, 255, 255, 0.35);
+	}
+
+	.about h3
+	{
+	    margin: 0 0 8px;
+	    font-family: 'Marcellus', serif;
+	    font-style: normal;
+	    font-size: 17px;
+	    color: var(--maroon-dark);
+	    text-align: center;
+	}
+
+	.about ol
+	{
+	    font-family: Georgia, 'Times New Roman', serif;
+	    font-size: 15px;
+	    line-height: 1.7;
+	    color: #2b2b2b;
+	    margin: 0;
+	    padding-left: 20px;
+	}
+
+	.about li
+	{
+	    margin-bottom: 6px;
+	}
+
+	.contact-band
+	{
+	    margin-top: 20px;
+	    text-align: center;
+	    background: linear-gradient(180deg, var(--gold-light), var(--gold));
+	    border: 2px solid var(--maroon-dark);
+	    border-radius: 8px;
+	    padding: 12px;
+	}
+
+	.contact-band .lbl
+	{
+	    font-family: 'Cinzel', serif;
+	    font-weight: 700;
+	    letter-spacing: 2px;
+	    color: var(--maroon-dark);
+	    font-size: 13px;
+	    margin-bottom: 6px;
+	}
+
+	.contact-band .items
+	{
+	    display: flex;
+	    justify-content: center;
+	    gap: 28px;
+	    flex-wrap: wrap;
+	    font-size: 15px;
+	    color: var(--maroon-dark);
+	    font-weight: 600;
+	}
+
+	.contact-band .items a
+	{
+	    color: inherit;
+	    text-decoration: none;
+	}
+
+	.contact-band .address
+	{
+	    margin-top: 8px;
+	    font-size: 14px;
+	    color: var(--maroon-dark);
+	}
+
+	.footer
+	{
+	    margin-top: 16px;
+	    text-align: center;
+	    font-family: 'Cinzel', serif;
+	    color: var(--maroon-dark);
+	    font-size: 13px;
+	    letter-spacing: 1px;
+	}
+
+	.footer .line2
+	{
+	    font-weight: 700;
+	    font-size: 15px;
+	    margin-top: 2px;
+	    letter-spacing: 2px;
+	}
+    </style>
+</head>
+<body>
+
+<div class="card" id="card">
+    <div class="inner-border" id="inner"></div>
+</div>
+
+<script>
+    /* =========================================================================
+       ALL EDITABLE CONTENT LIVES HERE. Change values below — never touch the
+       markup/CSS above to update the biodata itself.
+       ========================================================================= */
+    const biodata = {
+	invocation: "SRI GANESHAYA NAMAH",
+	title: "Marriage Biodata",
+	name: "RAJA NAGA MEDHESH",
+	subtitle: "Arya Vysya · Well Educated · Responsible · Ambitious",
+	tagline: "Aspiring Future Construction Tech Entrepreneur",
+
+	photos: {
+	    main: "./Matrimonial Biodata - Raja Naga Medhesh_files/photo_main.jpg",
+	    inset: "./Matrimonial Biodata - Raja Naga Medhesh_files/photo_inset.jpg",
+            qrc: "./Matrimonial Biodata - Raja Naga Medhesh_files/photo_qrc.svg"
+        },
+
+	personalDetails: [
+	    ["Date of Birth", "8<sup>th</sup> February 2001"],
+	    ["Time of Birth", "03:36 PM, Indian Standard Time (IST)"],
+	    ["Place of Birth", "Markapur, Prakasham Dt, AP, India"],
+	    ["Marital Status", "Never Married (Single)"],
+	    ["Religion", "Hindu"],
+	    ["Caste", "Arya Vysya"],
+	    ["Rashi", "Karkataka (Cancer)"],
+	    ["Nakshatra", "Ashlesha 4th Pada"],
+	    ["Manglik", "No"],
+	    ["Complexion", "Very Fair"],
+	    ["Blood Group", "B+"],
+	    ["Height", "5 ft. 8 in."],
+	    ["Weight", "69 kg"],
+	    ["Diet", "Vegetarian"],
+	    ["Faith", "Spiritual & Devout"]
+	],
+
+	educationProfession: [
+	    {icon: "🎓", title: "EDUCATION", body: "B.E - Civil Engineer"},
+	    {
+		icon: "💼",
+		title: "OCCUPATION",
+		body: "Software Business Development Executive<br>WFH Bangalore : 4iApps.com<br>Headquarters in Chennai"
+	    },
+	    {
+		icon: "₹",
+		title: "ANNUAL INCOME : ~18 LPA",
+		body: "₹ 12.5 LPA Salary +<br>₹ 6 LPA - International Travel Allowances"
+	    }
+	],
+
+	gotra: {
+	    self: "Vennakula",
+	    maternal: "Inakala",
+	    familyAssets: "10 Cr+ all in Bangalore assets<br/>(4 Own Apartments + BDA 50x80 plot) <br/>~1 Lakh Per Month Rental Income",
+	    profileLinkText: "Family photos, groom video & detailed 14 pager profile:",
+	    profileLinkUrl: "https://tinyurl.com/123medha"
+	},
+
+	family: [
+	    ["Father", "Raja Nagendra Kumar – M.E, ex C.T.O, ex D.R.D.O Scientist"],
+	    ["Mother", "RV Srivalli Aparna – M.Sc. (Maths), Housemaker"],
+	    ["Sibling", "One Younger Brother - 2nd Year ECE, BMSCE, Bangalore"]
+	],
+
+	partnerPreferences: [
+	    {
+		label: "Education/Career",
+		text: "Her present career status is not a deciding factor. We place greater importance on life skills, social maturity, a learning mindset, and genuine career intent. Post-marriage, we will strongly support and enable her aspirations by helping her access the right opportunities."
+	    },
+	    {
+		label: "Location",
+		text: "Bangalore is our preferred long-term base, as our family has established roots and assets here. However, he is open to relocating abroad if the right opportunity presents itself. He is equally open to settling overseas if the bride is already residing abroad or holds foreign citizenship."
+	    },
+	    {
+		label: "Family Background",
+		text: "Preference for a well-settled professional, business, industrialist, or entrepreneurial family with strong family values."
+	    }
+	],
+
+	contact: {
+	    phoneDisplay: "+91-98867 23872",
+	    whatsappUrl: "https://wa.me/+919886723872",
+	    email: "nagendra.raja@tejasoft.com",
+	    address: "J.P Nagar, Bangalore – 560108, Karnataka, India"
+	},
+
+	footerLine1: "Seeking a forward-thinking and supportive life partner to",
+	footerLine2: "construct a beautiful future together"
+    };
+
+    /* =========================================================================
+       RENDER LOGIC — generic, shouldn't need edits when content changes above.
+       ========================================================================= */
+    const cornerSVG = `<svg viewBox="0 0 100 100">
+  <path d="M2 2 Q 40 2 40 40 Q 40 60 60 60 Q 90 60 98 90" stroke="#8a6a1f" stroke-width="2" fill="none"></path>
+  <circle cx="14" cy="14" r="4" fill="#c9a24b"></circle>
+  <path d="M2 30 Q 20 30 20 12" stroke="#6b1420" stroke-width="1.5" fill="none"></path>
+</svg>`;
+    function personalDetailsRows(rows)
+    {
+	return rows.map(([label, value]) =>
+				`<tr><td class="label">${label}</td><td class="colon">:</td><td>${value}</td></tr>`
+	).join("");
+    }
+
+    function eduProfBoxes(items)
+    {
+	return items.map(i =>
+				 `<div class="box">
+       <div class="icon">${i.icon}</div>
+       <div class="box-title">${i.title}</div>
+       <div class="box-body">${i.body}</div>
+     </div>`
+	).join("");
+    }
+
+    function familyRows(rows)
+    {
+	return rows.map(([label, value]) =>
+				`<div class="row"><div class="lbl">${label}</div><div class="colon">:</div><div>${value}</div></div>`
+	).join("");
+    }
+
+    function preferenceItems(items)
+    {
+	return items.map(p => `<li><strong>${p.label}:</strong> ${p.text}</li>`).join("");
+    }
+
+    document.getElementById("inner").innerHTML = `
+  <div class="corner tl">${cornerSVG}</div>
+  <div class="corner tr">${cornerSVG}</div>
+  <div class="corner bl">${cornerSVG}</div>
+  <div class="corner br">${cornerSVG}</div>
+
+  <div class="invocation">|| ${biodata.invocation} ||</div>
+
+  <div class="om-wrap">
+    <svg class="om" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#c9a24b" stroke-width="2"></circle>
+      <text x="50" y="68" text-anchor="middle" font-size="58" font-family="Georgia, serif" fill="#6b1420">ॐ</text>
+    </svg>
+  </div>
+  <h1 class="title">${biodata.title}</h1>
+  <div class="name-banner"><div class="name">${biodata.name}</div></div>
+  <div class="subtitle">${biodata.subtitle}</div>
+  <div class="tagline">"${biodata.tagline}"</div>
+  <div class="inset-photo"><img src="${biodata.photos.inset}" alt="${biodata.name} - photo 2"></div>
+  <div class="section-header">PERSONAL DETAILS</div>
+  <div class="top-grid">
+    <div class="photo-frame" >
+        <img src="${biodata.photos.main}" alt="${biodata.name}"/>
+        <!--
+        <img src="${biodata.photos.qrc}" style="display: block; margin: 16px auto 0; width: 100%; max-width: 160px;"/>
+        <p style="text-align: center; margin: 4px 0 0; font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 0.5px; color: #8B6914; text-transform: uppercase;">
+           Scan for Full Profile
+        </p>
+        -->
+    </div>
+    <table class="details"><tbody>${personalDetailsRows(biodata.personalDetails)}</tbody></table>
+  </div>
+  <div class="section-header">EDUCATION &amp; PROFESSION</div>
+  <div class="three-col">${eduProfBoxes(biodata.educationProfession)}</div>
+  <div class="section-header">GOTRA &amp; FAMILY DETAILS</div>
+  <div class="two-col">
+    <div class="panel">
+      <h3>GOTRA</h3>
+      <div class="row"><div class="lbl">Self</div><div class="colon">:</div><div>${biodata.gotra.self}</div></div>
+      <div class="row"><div class="lbl">Maternal</div><div class="colon">:</div><div>${biodata.gotra.maternal}</div></div>
+      <div class="row"><div class="lbl">Family Assets</div><div class="colon">:</div><div>${biodata.gotra.familyAssets}</div></div>
+      <div class="row"><div>${biodata.gotra.profileLinkText}</div></div>
+      <div><a href="${biodata.gotra.profileLinkUrl}">${biodata.gotra.profileLinkUrl}</a></div>
+    </div>
+    <div class="panel">
+      <h3>FAMILY DETAILS</h3>
+      ${familyRows(biodata.family)}
+    </div>
+  </div>
+
+  <div class="about">
+    <h3>Partner Preferences</h3>
+    <ol>${preferenceItems(biodata.partnerPreferences)}</ol>
+  </div>
+
+  <div class="contact-band">
+    <div class="lbl">CONTACT &amp; ADDRESS</div>
+    <div class="items">
+      <span>📞💬 <a href="${biodata.contact.whatsappUrl}" target="_blank">${biodata.contact.phoneDisplay}</a></span>
+      <span>✉️ ${biodata.contact.email}</span>
+    </div>
+    <div class="address">🏠 ${biodata.contact.address}</div>
+  </div>
+
+  <div class="footer">
+    ${biodata.footerLine1}
+    <div class="line2">${biodata.footerLine2}</div>
+  </div>
+`;
+</script>
+</body>
+</html>
